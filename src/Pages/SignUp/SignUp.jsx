@@ -133,7 +133,7 @@ export default function SignUp() {
           <input {...register('checkbox', { required: true })} type='checkbox' id='checkbox' />
           <span className='check-text'>I agree to the processing of my personal information.</span>
           {errors.checkbox && (
-            <span className='error-msg error-check'>You must agree to the terms.</span>
+            <span className='error-msg error-check'>Вы должны принять условия.</span>
           )}
         </div>
 

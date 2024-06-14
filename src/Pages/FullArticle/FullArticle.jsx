@@ -33,6 +33,11 @@ export default function FullArticle() {
   const currentUser = useSelector(selectUser);
 
   const likeClick = async () => {
+    if (!isAuthenticated) {
+      navigate('/sign-in');
+      return;
+    }
+
     const token = localStorage.getItem('token');
     try {
       if (liked) {
