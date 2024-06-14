@@ -1,0 +1,140 @@
+.sign-up-form {
+  width: 385px;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  color: rgb(38, 38, 38);
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+
+  form {
+    margin: 0 auto;
+  }
+  h2 {
+    text-align: center;
+    display: inline;
+    margin-top: 40px;
+  }
+  label {
+    margin-left: 27px;
+  }
+  span {
+    margin-left: 15px;
+  }
+  .already {
+    margin-left: 85px;
+    color: #8c8c8c;
+  }
+
+  .check {
+    padding: 1px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    position: relative;
+    margin-left: 27px;
+    margin-bottom: 40px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: 0;
+      width: 90%;
+      height: 1px;
+      background-color: #8c8c8c;
+    }
+  }
+
+  input[type='email'],
+  input[type='password'],
+  input[type='text'],
+  input[type='password'] {
+    display: block;
+    width: 320px;
+    height: 40px;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-left: 33px;
+    outline: none;
+  }
+
+  input[type='checkbox'] {
+    margin-top: 15px;
+    width: 20px;
+    height: 20px;
+    outline: none;
+  }
+
+  button {
+    display: block;
+    margin-top: 25px;
+    width: 320px;
+    height: 40px;
+    margin-bottom: 20px;
+    margin-left: 27px;
+    border-radius: 4px;
+    color: white;
+    background: rgb(24, 144, 255);
+    cursor: pointer;
+    border: none;
+  }
+
+  a {
+    color: rgb(24, 144, 255);
+  }
+
+  .error {
+    color: red;
+    font-size: 0.8rem;
+  }
+}
+
+.check-text {
+  word-wrap: break-word;
+  color: #595959;
+}
+
+#checkbox {
+  margin: 0;
+  margin-top: 4px;
+}
+
+.stl-label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+span.error-msg {
+  margin-left: 0;
+  color: red;
+}
+
+.error-check {
+  position: absolute;
+  bottom: -25px;
+  left: 0px;
+}
+
+input#username,
+input#email,
+input#password,
+input#repeatPassword {
+  margin-left: 0;
+}
+
+input[type='email'].error-input,
+input[type='password'].error-input,
+input[type='text'].error-input {
+  border-color: red;
+}

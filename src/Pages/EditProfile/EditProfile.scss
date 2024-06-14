@@ -1,0 +1,74 @@
+.edit-profile {
+  width: 385px;
+  height: 520px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  color: rgb(38, 38, 38);
+  background-color: white;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+
+  form {
+    margin: 0 10%;
+    height: 400px;
+  }
+  h2 {
+    text-align: center;
+    display: inline;
+    margin-top: 40px;
+  }
+
+  input[type='url'],
+  input[type='text'],
+  input[type='email'],
+  input[type='password'] {
+    display: block;
+    width: 320px;
+    height: 40px;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    outline: none;
+  }
+
+  button {
+    display: block;
+    margin-top: 20px;
+    width: 320px;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    color: white;
+    background: rgb(24, 144, 255);
+    cursor: pointer;
+    border: none;
+  }
+
+  a {
+    color: rgb(24, 144, 255);
+  }
+}
+
+.error-message {
+  color: red;
+  margin: 0;
+}
+
+input[type='email'].error-input,
+input[type='password'].error-input,
+input[type='text'].error-input,
+input[type='url'].error-input {
+  border-color: red;
+}
+
+.alert-custom {
+  width: 320px;
+  margin-left: 32px;
+}
