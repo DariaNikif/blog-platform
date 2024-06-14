@@ -9,5 +9,8 @@
 
 .ant-pagination .ant-pagination-item-active {
   background-color: #1677ff;
-  color: #ffffff;
+}
+
+.ant-pagination .ant-pagination-item-active a {
+  color: #ffffff !important;
 }
