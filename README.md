@@ -1,1 +1,1 @@
-https://blog-platform-five-pink.vercel.app/
+https://blog-platform-three-xi.vercel.app/
