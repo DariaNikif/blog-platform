@@ -1,7 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { logout, selectIsAuthenticated, selectUser } from '../../Redux/slice/authSlice';
-import myPhoto from '../../Assets/profile.jpg';
 import './Header.scss';
 
 export default function Header() {
@@ -14,6 +13,9 @@ export default function Header() {
     dispatch(logout());
     navigate('/sign-in');
   };
+
+  const defaultImage = 'https://static.productionready.io/images/smiley-cyrus.jpg';
+  const userImage = user.image || defaultImage;
 
   return (
     <header className='header'>
@@ -29,7 +31,7 @@ export default function Header() {
             <div className='name'>
               <span>{user.username}</span>
               <span className='img-user'>
-                <img src={user.image || myPhoto} alt='photo' className='img-header' />
+                <img src={userImage} alt='photo' className='img-header' />
               </span>
             </div>
           </Link>

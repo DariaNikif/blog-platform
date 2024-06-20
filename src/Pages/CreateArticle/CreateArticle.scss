@@ -89,7 +89,7 @@
 
   .add {
     margin-right: auto;
-    margin-left: 374px;
+    margin-left: 371px !important;
     color: rgb(24, 144, 255);
     border: 1px solid rgb(24, 144, 255);
   }
@@ -113,5 +113,10 @@
 
   .text {
     outline: none;
+  }
+
+  .error-message-tags {
+    margin-left: 47px;
+    color: red;
   }
 }

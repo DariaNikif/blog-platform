@@ -1,11 +1,19 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const myPhoto = '../../Assets/channels4_profile.jpg';
+const defaultImage = 'https://static.productionready.io/images/smiley-cyrus.jpg';
 
 const token = localStorage.getItem('token');
 const username = localStorage.getItem('username');
 const email = localStorage.getItem('email');
-const image = localStorage.getItem('image');
+let image = localStorage.getItem('image') || defaultImage;
+
+if (!localStorage.getItem('image')) {
+  localStorage.setItem('image', defaultImage);
+}
+
+if (!token) {
+  localStorage.removeItem('image');
+}
 
 export const authSlice = createSlice({
   name: 'auth',
@@ -14,7 +22,7 @@ export const authSlice = createSlice({
     user: {
       username: username || '',
       email: email || '',
-      image: image || myPhoto,
+      image: image,
     },
   },
   reducers: {
@@ -25,10 +33,11 @@ export const authSlice = createSlice({
       if (action.payload.username) localStorage.setItem('username', action.payload.username);
       if (action.payload.email) localStorage.setItem('email', action.payload.email);
       if (action.payload.image) localStorage.setItem('image', action.payload.image);
+      else localStorage.setItem('image', defaultImage);
     },
     logout: (state) => {
       state.isAuthenticated = false;
-      state.user = { username: '', email: '', image: '' };
+      state.user = { username: '', email: '', image: defaultImage };
       localStorage.removeItem('token');
       localStorage.removeItem('username');
       localStorage.removeItem('email');

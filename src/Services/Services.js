@@ -12,6 +12,7 @@ export const getArticles = async (page = 1, pageSize = 10) => {
         offset: (page - 1) * pageSize,
       },
     });
+
     return {
       articles: response.data.articles,
       total: response.data.articlesCount,
@@ -109,6 +110,7 @@ export const getFullArticle = async (token, slug) => {
         Authorization: `Token ${token}`,
       },
     });
+
     return response.data;
   } catch (error) {
     console.error('Error fetching article:', error);
